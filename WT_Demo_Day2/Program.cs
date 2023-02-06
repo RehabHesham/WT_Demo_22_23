@@ -282,3 +282,27 @@ decimal totalPrice = (decimal)(new Product()
  *    List
  *    ToString() return string
  */
+
+// Main Something like this
+
+//bool cont = false;
+//do
+//{
+//    Console.WriteLine("Enter 1 to push, Enter 2 to pop");
+//    int val = int.Parse(Console.ReadLine());
+//    switch (val)
+//    {
+//        case 1:
+//            Console.WriteLine("Enter value to push in stack:");
+//            int val2 = int.Parse(Console.ReadLine());
+//            stack.Push(val2);
+//            break;
+//        case 2:
+//            Console.WriteLine(stack.Pop());
+//            break;
+//    }
+//    Console.WriteLine("Do you want to continue? y/n");
+//    string res = Console.ReadLine();
+//    if (res == "Y" || res == "y") cont = true;
+//    else cont = false;
+//} while (cont);
