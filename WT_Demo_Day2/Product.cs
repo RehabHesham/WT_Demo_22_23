@@ -17,6 +17,7 @@ namespace WT_Demo_Day2
         public string Name { get { return name; }
             set { 
                 name = value;
+
             } 
         }
 
