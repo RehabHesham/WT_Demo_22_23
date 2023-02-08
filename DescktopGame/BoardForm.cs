@@ -33,7 +33,6 @@ namespace DescktopGame
         }
 
 
-
         private bool IsAWinner(int player)
         {
             bool win = false;
@@ -90,13 +89,6 @@ namespace DescktopGame
             return true;
         }
 
-        private void btn_row0_col0_Click(object sender, EventArgs e)
-        {
-            btn_row0_col0.Text = CurrentPlayer == 1 ? "X" : "O";
-            ApplyMove(0, 0);
-            btn_row0_col0.Enabled = false;
-        }
-
 
         private void DisableBoard(bool isDisabled)
         {
@@ -145,10 +137,33 @@ namespace DescktopGame
             }
         }
 
+        private void ClearBoard()
+        {
+            btn_row0_col0.Text = string.Empty;
+            btn_row0_col1.Text = string.Empty;
+            btn_row0_col2.Text = string.Empty;
+            btn_row1_col0.Text = string.Empty;
+            btn_row1_col1.Text = string.Empty;
+            btn_row1_col2.Text = string.Empty;
+            btn_row2_col0.Text = string.Empty;
+            btn_row2_col1.Text = string.Empty;
+            btn_row2_col2.Text = string.Empty;
+        }
+
+
+        #region Buttons
+
+        private void btn_row0_col0_Click(object sender, EventArgs e)
+        {
+            btn_row0_col0.Text = CurrentPlayer == 1 ? "X" : "O";
+            ApplyMove(0, 0);
+            btn_row0_col0.Enabled = false;
+        }
+
         private void btn_row0_col1_Click(object sender, EventArgs e)
         {
             btn_row0_col1.Text = CurrentPlayer == 1 ? "X" : "O";
-            ApplyMove(0,1);
+            ApplyMove(0, 1);
             btn_row0_col1.Enabled = false;
         }
 
@@ -201,6 +216,9 @@ namespace DescktopGame
             btn_row2_col2.Enabled = false;
         }
 
+        #endregion
+
+
         private void btnNewGame_Click(object sender, EventArgs e)
         {
             Board = new int[3, 3];
@@ -209,19 +227,7 @@ namespace DescktopGame
             DisableBoard(true);
         }
 
-        private void ClearBoard()
-        {
-            btn_row0_col0.Text = string.Empty;
-            btn_row0_col1.Text = string.Empty;
-            btn_row0_col2.Text = string.Empty;
-            btn_row1_col0.Text = string.Empty;
-            btn_row1_col1.Text = string.Empty;
-            btn_row1_col2.Text = string.Empty;
-            btn_row2_col0.Text = string.Empty;
-            btn_row2_col1.Text = string.Empty;
-            btn_row2_col2.Text = string.Empty;
-        }
-
+       
         private void btnReset_Click(object sender, EventArgs e)
         {
             btnNewGame_Click(null,null);
