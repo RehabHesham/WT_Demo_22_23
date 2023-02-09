@@ -134,5 +134,29 @@ namespace DescktopGame
             txtPlayer1Score.Text = "0";
             txtPlayer2Score.Text = "0";
         }
+
+        private void btnSaveScore_Click(object sender, EventArgs e)
+        {
+            // validate data
+            // context
+            DatabaseContext context = new DatabaseContext();
+            GameScore gameScore = new GameScore()
+            {
+                PlayerXName = myGame.playerXName,
+                PlayerOName= myGame.playerOName,
+                PlayerXScore = myGame.playerXScore,
+                PlayerOScore= myGame.playerOScore,
+                GameDate = DateTime.Now
+            };
+            int result = context.SaveScore(gameScore);
+            if(result > 0)
+            {
+                MessageBox.Show("Data saved successfully.");
+                this.Hide();
+                ScoresForm scoresForm = new ScoresForm(); 
+                scoresForm.ShowDialog();
+                this.Close();
+            }
+        }
     }
 }

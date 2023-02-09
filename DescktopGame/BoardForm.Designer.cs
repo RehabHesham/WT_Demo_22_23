@@ -47,6 +47,7 @@
             this.lblPlayer1Name = new System.Windows.Forms.Label();
             this.btnNewGame = new System.Windows.Forms.Button();
             this.btnReset = new System.Windows.Forms.Button();
+            this.btnSaveScore = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -63,6 +64,7 @@
             // 
             // splitContainer1
             // 
+            this.splitContainer1.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.splitContainer1.BackgroundImage = global::DescktopGame.Properties.Resources.greg_rosenke_6QnEf_b47eA_unsplash;
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
@@ -232,6 +234,7 @@
             // 
             // splitContainer3.Panel2
             // 
+            this.splitContainer3.Panel2.Controls.Add(this.btnSaveScore);
             this.splitContainer3.Panel2.Controls.Add(this.btnNewGame);
             this.splitContainer3.Panel2.Controls.Add(this.btnReset);
             this.splitContainer3.Size = new System.Drawing.Size(367, 372);
@@ -284,9 +287,9 @@
             // btnNewGame
             // 
             this.btnNewGame.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnNewGame.Location = new System.Drawing.Point(8, 97);
+            this.btnNewGame.Location = new System.Drawing.Point(8, 66);
             this.btnNewGame.Name = "btnNewGame";
-            this.btnNewGame.Size = new System.Drawing.Size(351, 82);
+            this.btnNewGame.Size = new System.Drawing.Size(351, 48);
             this.btnNewGame.TabIndex = 1;
             this.btnNewGame.Text = "New Game";
             this.btnNewGame.UseVisualStyleBackColor = true;
@@ -297,11 +300,22 @@
             this.btnReset.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnReset.Location = new System.Drawing.Point(8, 9);
             this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(351, 82);
+            this.btnReset.Size = new System.Drawing.Size(351, 51);
             this.btnReset.TabIndex = 0;
             this.btnReset.Text = "Reset";
             this.btnReset.UseVisualStyleBackColor = true;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
+            // btnSaveScore
+            // 
+            this.btnSaveScore.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnSaveScore.Location = new System.Drawing.Point(8, 131);
+            this.btnSaveScore.Name = "btnSaveScore";
+            this.btnSaveScore.Size = new System.Drawing.Size(351, 56);
+            this.btnSaveScore.TabIndex = 2;
+            this.btnSaveScore.Text = "Save Score";
+            this.btnSaveScore.UseVisualStyleBackColor = true;
+            this.btnSaveScore.Click += new System.EventHandler(this.btnSaveScore_Click);
             // 
             // BoardForm
             // 
@@ -353,5 +367,6 @@
         private Button btn_row0_col0;
         private Button btnNewGame;
         private Button btnReset;
+        private Button btnSaveScore;
     }
 }
