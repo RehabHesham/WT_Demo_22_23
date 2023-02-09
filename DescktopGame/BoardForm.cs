@@ -46,41 +46,6 @@ namespace DescktopGame
             btn_row2_col2.Text = string.Empty;
         }
 
-
-        //private void ApplyMove(int row, int col)
-        //{
-        //    Board[row,col] = CurrentPlayer;
-        //    bool isWinner = IsAWinner(CurrentPlayer);
-        //    if (isWinner)
-        //    {
-        //        MessageBox.Show($"Player {(CurrentPlayer == 1 ? "X" : "O")}");
-        //        if (CurrentPlayer == 1)
-        //        {
-        //            Player1Score += 1;
-        //            txtPlayer1Score.Text = Player1Score.ToString();
-        //        }
-
-        //        else { Player2Score += 1;
-        //            txtPlayer2Score.Text = Player2Score.ToString();
-        //        }
-        //        DisableBoard(false);
-        //    }
-        //    else
-        //    {
-        //        bool isFull = IsFull();
-        //        if (isFull)
-        //        {
-        //            MessageBox.Show("No one wins.");
-        //            DisableBoard(false);
-        //        }
-        //        else
-        //        {
-        //            CurrentPlayer = CurrentPlayer == 1 ? 2 : 1;
-        //        }
-        //    }
-        //}
-
-
         private void ApplyMove(int row, int col, Button button)
         {
             button.Text = myGame.currentPlayer == 1 ? "X" : "O";
